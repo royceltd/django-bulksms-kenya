@@ -1,0 +1,47 @@
+Metadata-Version: 1.2
+Name: django-bulksms-kenya
+Version: 0.1
+Summary: A Django App to send Bulk SMS in any Django Projects
+Home-page: https://github.com/royceltd/django-bulksms-kenya
+Author: Royce Technologies Ltd
+Author-email: info@roycetechnologies.co.ke
+License: BSD-3-Clause  # Example license
+Description: Django Bulk SMS Kenya is a Django app that helps you send Bulk sms to groups aor contacts via an easy to use UI. 
+        You can also send Bulk sms from any view function
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add "polls" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'roycebulksms',
+            ]
+        
+        2. Include the polls URLconf in your project urls.py like this::
+        
+            path('roycebulksms/', include('roycebulksms.urls')),
+        
+        3. Run ``python manage.py migrate`` to create the polls models.
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/
+           to create a poll (you'll need the Admin app enabled).
+        
+        5. Visit http://127.0.0.1:8000/polls/ to participate in the poll.
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.0
