@@ -1,26 +1,46 @@
-#### Integrate Bulk SMS into your python system in 2 minutes
+#### Integrate Bulk SMS into your Django project in 2 minutes
 
 [Open a free account](https://bulksms.roycetechnologies.co.ke/) and obtain your apikey
 
 Example sender ID `RoyceLtd`
 
-- ##### Install this package
+## Quick start
+
+##### 1. Install this package
 
 ```
 pip install python-bulksms-kenya
 ```
 
-- ##### Install requests
+##### 2. Install requests
 
 ```
 pip install requests
 ```
 
-- ##### Send message
+##### 3. Add roycebulksms into installed apps
 
 ```
-
-from roycebulksms import sendSMS
-
-sendSMS(number, message, senderid,apikey)
+INSTALLED_APPS = [
+   ...
+   'roycebulksms',
+   ]
 ```
+
+##### 4. Include the polls URLconf in your project urls.py like this
+
+```
+path('roycebulksms/', include('roycebulksms.urls')),
+```
+
+Run `python manage.py migrate` to create the Bulk SMS models.
+
+5.Start the development server and visit http://127.0.0.1:8000/admin/
+to login, for security anly loggin users can access the bulksms UI (you'll need the Admin app enabled).
+
+6.Visit http://127.0.0.1:8000/bulksms/ to access to Bulk SMS UI. (Add Sender and API key Obtained from Bulk SMS portal).
+
+###### Open a free account](https://bulksms.roycetechnologies.co.ke/) and obtain your apikey
+
+#### Sending from a view
+
