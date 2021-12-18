@@ -9,7 +9,7 @@ Example sender ID `RoyceLtd`
 ##### 1. Install this package
 
 ```
-pip install python-bulksms-kenya
+pip install django-bulksms-kenya
 ```
 
 ##### 2. Install requests
@@ -27,7 +27,7 @@ INSTALLED_APPS = [
    ]
 ```
 
-##### 4. Include the polls URLconf in your project urls.py like this
+##### 4. Include the roycebulksms URLconf in your project urls.py like this
 
 ```
 path('roycebulksms/', include('roycebulksms.urls')),
@@ -44,3 +44,16 @@ to login, for security anly loggin users can access the bulksms UI (you'll need 
 
 #### Sending from a view
 
+- import sendTextMessage
+
+```
+from roycebulksms.views import sendTextMessage
+```
+
+- send Text message
+
+```
+sendTextMessage('0713727937', 'text', 'RoyceLtd')
+```
+
+- access status of sent text in the outbox
