@@ -26,14 +26,21 @@ INSTALLED_APPS = [
    'roycebulksms',
    ]
 ```
+##### 4. Make Migrations and migrate
 
-##### 4. Include the roycebulksms URLconf in your project urls.py like this
+```
+python manage.py makemigrations
+
+python manage.py migrate
+```
+
+##### 5. Include the roycebulksms URLconf in your project urls.py like this
 
 ```
 path('roycebulksms/', include('roycebulksms.urls')),
 ```
 
-Run `python manage.py migrate` to create the Bulk SMS models.
+Run `python manage.py runserver` to start the server.
 
 5.Start the development server and visit http://127.0.0.1:8000/admin/
 to login, for security anly loggin users can access the bulksms UI (you'll need the Admin app enabled).
